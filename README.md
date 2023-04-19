@@ -12,8 +12,11 @@ steam.py is the file that gets my steam stuff. there are a few variables at the 
 my now page uses javascript to process the json files. 
 for an example, see the now.js file inculded.
 using $.getJSON, grab the 'achievements' json file and put it in a function. everything we'll do happens inside that function. 
-
-
+```JavaScript
+$.getJSON('https://raw.githubusercontent.com/ZerosLab/transitionary/main/achievements.json', function(test) {
+STUFF
+}
+```
 ## latest achievements
 
 
