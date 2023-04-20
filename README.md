@@ -11,30 +11,32 @@ steam.py is the file that gets my steam stuff. there are a few variables at the 
 # javascript
 my now page uses javascript to process the json files. 
 for an example, see the now.js file inculded.
-using $.getJSON, grab the 'achievements' json file and put it in a function. everything we'll do happens inside that function. 
+
+## latest achievements
+to list latest steam achivements in your now page, start by using $.getJSON to grab the 'achievements' json file (replace it with your repo) and put it in a function. everything we'll do happens inside that function. 
 ```JavaScript
 $.getJSON('https://raw.githubusercontent.com/ZerosLab/transitionary/main/achievements.json', function(test) {
 STUFF
 }
 ```
-## latest achievements
 
 
-
-
-
-then, initialize a 
-    start={0:{'unlocktime': 0},1:{'unlocktime': 0},2:{'unlocktime': 0}};
-    //console.log("okay");
-    
-    
-    //console.log(test);
-    
-     achieves={};
-  for (let x in test){
-    start={0:{'unlocktime': 0},1:{'unlocktime': 0},2:{'unlocktime': 0}};
-    for (let y in test[x]){
-   //   console.log(test[x][y]);
+Additionally, create an empty object. 
+```
+achieves={};
+```
+open up a for.. in loop, going through the function input. 
+```
+for (let x in test){
+```
+then, make an object with the same number of values as achievements you wish to display, like this:
+```
+start={0:{'unlocktime': 0},1:{'unlocktime': 0},2:{'unlocktime': 0}};
+```
+Then, we want to iterate through all the achivements the json spit out. if you used my code to get the data, itll already be cleaned up a bit, so itll only have achivements youve obtained, and we wont have to clean it further 
+```
+for (let y in test[x]){
+```
      
       
     if (test[x][y]=="false"){}
