@@ -76,9 +76,9 @@ now, iterate through achieves, adding the game name and some html code
 ```
     for (let x in achieves){
       innertext += ("<b>"+x + "</b><br><ul>");
-      ```
-      then, inside this for loop, iterate again through all the sub-objects - the individual achivements. this part also adds html tags and the description. once youre outside the for loop, add some ending tags.
-      ```
+```
+then, inside this for loop, iterate again through all the sub-objects - the individual achivements. this part also adds html tags and the description. once youre outside the for loop, add some ending tags.
+```
       for (let y in achieves[x]){
         innertext += "<li>";
         innertext += achieves[x][y].name;
