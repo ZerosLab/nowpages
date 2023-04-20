@@ -42,7 +42,7 @@ finally, we do the last bit of filtering, removing the perfection indicator. the
 if (test[x][y]=="false"){}
 else if (test[x][y=="true"]){}
 ```
-
+now, go through and make else if statements going through, here we're inserting the achivement objects into `start`, as well as shifting the other entries down. im sure theres a better way to do this, but this is how ive been doing it.
 ```
     else if (test[x][y].unlocktime>start[0].unlocktime){
       start[2]=start[1];start[1]=start[0];
@@ -55,7 +55,6 @@ else if (test[x][y=="true"]){}
     else if(start[2].unlocktime<test[x][y].unlocktime<start[1].unlocktime){
       start[2]=test[x][y];
       }
-    // console.log(x);
 ```
 
 i lied about that being the last filtering, theres one more filter, its for a deprecated field just put it in, i keep meaning to remove it from my program but its in there. 
@@ -68,32 +67,30 @@ else{
 achieves[x]=start;
 }
 ```
-    
-    }//console.log(achieves);
-    
-     innertext="<ul><li'>";
+now, its time to string together the actual inner html code to display the achivements
+innertext is the internal html code for this 
+```
+innertext="<ul><li'>";
+```
+now, iterate through achieves, adding the game name and some html code
+```
     for (let x in achieves){
       innertext += ("<b>"+x + "</b><br><ul>");
-      
+      ```
+      then, inside this for loop, iterate again through all the sub-objects - the individual achivements. this part also adds html tags and the description. once youre outside the for loop, add some ending tags.
+      ```
       for (let y in achieves[x]){
         innertext += "<li>";
         innertext += achieves[x][y].name;
         innertext += "<ul><li>";
         innertext += achieves[x][y].description +"</ul>";
-        
-         
         }
-        
         innertext += "<br><br></ul>";
         }
-    
-    
-    
-   
-    
-document.getElementById("testing").innerHTML = (innertext);
-
-
+```
+finally, push innertext to the html document
+```
+document.getElementById("steamgames").innerHTML = (innertext);
 });
-
-
+```
+make sure you end the function :3
