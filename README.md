@@ -37,11 +37,11 @@ Then, we want to iterate through all the achivements the json spit out. if you u
 ```
 for (let y in test[x]){
 ```
-     
-      
-    if (test[x][y]=="false"){}
-    else if (test[x][y=="true"]){}
-    
+finally, we do the last bit of filtering, removing the perfection indicator. the program i use adds a field that indicates whether a game is perfected, and these first if statements filter those data points out. theyll be used later for displaying perfection. 
+```
+if (test[x][y]=="false"){}
+else if (test[x][y=="true"]){}
+```
     else if (test[x][y].unlocktime>start[0].unlocktime){
       start[2]=start[1];start[1]=start[0];
       start[0]=test[x][y];
