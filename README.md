@@ -13,7 +13,7 @@ my now page uses javascript to process the json files.
 for an example, see the now.js file inculded.
 
 ## latest achievements
-to list latest steam achivements in your now page, start by using $.getJSON to grab the 'achievements' json file (replace it with your repo) and put it in a function. everything we'll do happens inside that function. 
+to list latest steam achivements in your now page, start by using $.getJSON to grab the 'achievements' json file (replace it with your repo) and put it in a function. everything we'll do happens inside that function. this also lists your latest played games.
 ```JavaScript
 $.getJSON('https://raw.githubusercontent.com/ZerosLab/transitionary/main/achievements.json', function(test) {
 STUFF
