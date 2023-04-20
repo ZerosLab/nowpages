@@ -42,6 +42,8 @@ finally, we do the last bit of filtering, removing the perfection indicator. the
 if (test[x][y]=="false"){}
 else if (test[x][y=="true"]){}
 ```
+
+```
     else if (test[x][y].unlocktime>start[0].unlocktime){
       start[2]=start[1];start[1]=start[0];
       start[0]=test[x][y];
@@ -54,15 +56,18 @@ else if (test[x][y=="true"]){}
       start[2]=test[x][y];
       }
     // console.log(x);
-      
-      
-      
-      }
-    if (x=="analysis"){}
-    else{
-    achieves[x]=start;
-    }
-    
+```
+
+i lied about that being the last filtering, theres one more filter, its for a deprecated field just put it in, i keep meaning to remove it from my program but its in there. 
+```
+if (x=="analysis"){}
+```
+in the else statement, add the `achives` object to `start`
+```
+else{
+achieves[x]=start;
+}
+```
     
     }//console.log(achieves);
     
