@@ -2,7 +2,7 @@
 the resources i use to make my /now page
 
 # use
-basically, initialize a repo on your hard drive, place the scripts there, and then run them to get and push the files. you may have to add some of the files to the github manually the first time, but once theyre added, it should all be good. you can automate running that python file in many ways, and there are also alternative ways to get the jsons in the first place. 
+basically, initialize a repo on your hard drive, place the scripts there, and then run the python script to get and push the files. you may have to add some of the files to the github manually the first time, but once theyre added, it should all be good. you can automate running that python file in many ways, and there are also alternative ways to get the jsons in the first place. 
 
 
 # steam.py
