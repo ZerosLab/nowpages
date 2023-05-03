@@ -94,3 +94,48 @@ document.getElementById("steamgames").innerHTML = (innertext);
 });
 ```
 make sure you end the function :3
+## books.json
+This one's manual. It's currently just books, but it will contain shows, movies, music, and audio stories once i finish it. It's manually created, its a json file, theres objects (books, shows, movies, music, or audio)that have arrays as their second component. these arrays are made up of objects, so far its just books, they have the following properties:
+- title: self-explanitory, its the title
+- author: also pretty self-explanator, its the author. in the cases of translated works, this is the author *of the original work, not the translator*.
+- rating: also pretty self-explanator, its my personal rating of the book. by default, its ??/10, to be replaced with a number 0-10, or with an abstract description, a la Josh Strife Hayes' Worst MMOs ratings.
+- year: year of publication. inconsistent on whether original year or edition year, because i cant bring myself to care
+- shelf: whether i own it physically, can be true, false, or desired
+- tbr: whether an object is on my tbr list, can be true, false, or completed.
+then there are some fields only some books have
+- translaor: translator of the texts
+- artist: whoever did the art, typically for a comic book or set thereof. 
+
+### Shows
+tv shows i want to or have watched. 
+- title
+- publishing company
+- showrunner
+- rating. this one is an array itself, with season by season ratings. some shows i might rate episode by episode, but only if i consciously decide to do episode by episode reviews.
+- year, specifically the start year.
+
+### Movies
+- title
+- director
+- year
+- rating
+- additional fields may be added if a certain actor or member of the crew is notable (for example, if Nick Cage is in the movie, he'll be in an 'actors' field)
+
+### Music
+this is my music collection, its also on my discogs,
+- title
+- artist: the main artist of the album
+- contributing: any contributing artists
+- label: record label
+- year: year of release
+- format: format
+- ctlg: catalog number
+- rating: same as books rating 
+
+### Audio
+these are audio dramas, mostly big finish. 
+- title
+- author
+- production company
+- year
+
